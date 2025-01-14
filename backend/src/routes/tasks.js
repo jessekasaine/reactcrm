@@ -1,7 +1,8 @@
 // backend/src/routes/tasks.js
+
 const express = require('express');
 const router = express.Router();
-const pool = require('../config/database');
+const pool = require('../config/db');
 const authenticateToken = require('../middleware/auth');
 
 router.post('/', authenticateToken, async (req, res, next) => {

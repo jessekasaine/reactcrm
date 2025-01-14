@@ -1,9 +1,11 @@
+//server.js
+// backend/scripts/server.js
+
 //import express
 const express = require('express');
 const db = require('../src/config/db')
 const app = express();
 
-//
 app.get('/users', (req, res) =>{
     db.pool.query('SELECT * FROM users').then((result) => {
         return res.status(200).json(result.rows);

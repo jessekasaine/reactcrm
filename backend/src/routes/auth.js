@@ -1,10 +1,12 @@
 // backend/src/routes/auth.js
+// Authentication routes
+
 const express = require('express');
 const router = express.Router();
 const { register, login } = require('../controllers/authController');
 const validateAuth = require('../middleware/validateAuth');
 
-const pool = require('../config/database');
+const pool = require('../config/db');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 

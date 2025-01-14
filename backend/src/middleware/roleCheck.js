@@ -1,3 +1,6 @@
+//backend/src/middleware/checkRole.js
+// Role check middleware
+
 const checkRole = (role) => {
     return async (req, res, next) => {
         try {
@@ -19,3 +22,5 @@ const checkRole = (role) => {
         }
     };
 };
+
+module.exports = checkRole;
